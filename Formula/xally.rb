@@ -5,13 +5,13 @@
 class Xally < Formula
   desc "X-Ally is an AI-based TUI (aka Terminal User Interface) tool that helps people do things more elegantly."
   homepage "https://github.com/robinmin/xally"
-  version "0.1.7"
+  version "0.1.8"
   license "GPL-3."
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/robinmin/xally/releases/download/v0.1.7/xally_Darwin_x86_64.tar.gz"
-      sha256 "2776ab1eecdee532a35c07ba2cb40caa2f022a61ea50269da6854d78d7d7e19b"
+      url "https://github.com/robinmin/xally/releases/download/v0.1.8/xally_Darwin_x86_64.tar.gz"
+      sha256 "8a51e5ed335d0c1aa130823dbfd4c1d23d4af59a6f1b697eee783afdb378bda2"
 
       def install
         bin.install "xally"
@@ -19,8 +19,8 @@ class Xally < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/robinmin/xally/releases/download/v0.1.7/xally_Darwin_arm64.tar.gz"
-      sha256 "468ab3a28e0322bfb03edbdd4b29f4c7cae38552267afd50501f147125240209"
+      url "https://github.com/robinmin/xally/releases/download/v0.1.8/xally_Darwin_arm64.tar.gz"
+      sha256 "d6d45116a17c115201f84f1c50b4a70891de1b5a31067c841061cf482b3ac419"
 
       def install
         bin.install "xally"
@@ -30,18 +30,18 @@ class Xally < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/robinmin/xally/releases/download/v0.1.7/xally_Linux_x86_64.tar.gz"
-      sha256 "9b05614c99de037c7bd1b02932139a56b2f1282aaaa271d75fc20714b5d08d4f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/robinmin/xally/releases/download/v0.1.8/xally_Linux_arm64.tar.gz"
+      sha256 "3dd18eef2ec14b8837253ae59300bb8e527ef8764703d1775b9811d772d0be3c"
 
       def install
         bin.install "xally"
         bin.install "xally_server"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinmin/xally/releases/download/v0.1.7/xally_Linux_arm64.tar.gz"
-      sha256 "79953752e064bd185532a6873f72f5f7a32c4850b087c8cfba68e318859ca821"
+    if Hardware::CPU.intel?
+      url "https://github.com/robinmin/xally/releases/download/v0.1.8/xally_Linux_x86_64.tar.gz"
+      sha256 "e90d8dbd563d5fa5df697bdff8baf3a83e9d48d5c17894fda630099fb12acbc8"
 
       def install
         bin.install "xally"
