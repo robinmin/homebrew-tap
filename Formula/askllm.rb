@@ -5,21 +5,21 @@
 class Askllm < Formula
   desc "Askllm is a tiny command line tool for you to execute LLM inquiry with prompt or prompt file."
   homepage "https://github.com/robinmin/askllm"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache License 2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/robinmin/askllm/releases/download/v0.1.0/askllm_Darwin_x86_64.tar.gz"
-      sha256 "42766ddb77eb8ed52ad6f32432fff07b96747147867579dd2b513c41e2bea7b5"
+      url "https://github.com/robinmin/askllm/releases/download/v0.1.1/askllm_Darwin_x86_64.tar.gz"
+      sha256 "58a38b505083a11480861be123ee6ea27c0a21d809b5fde1df4d0b47e2f13294"
 
       def install
         bin.install "askllm"
       end
     end
     on_arm do
-      url "https://github.com/robinmin/askllm/releases/download/v0.1.0/askllm_Darwin_arm64.tar.gz"
-      sha256 "17d9430ec30d11eb0ededda6e3090fe853b2868c4bb886bfc00f06f0d1f68f35"
+      url "https://github.com/robinmin/askllm/releases/download/v0.1.1/askllm_Darwin_arm64.tar.gz"
+      sha256 "14bc561c083b5ff88a34c73b47e983be44cf4bccd591f84d7d07956c46cb21a1"
 
       def install
         bin.install "askllm"
@@ -30,8 +30,8 @@ class Askllm < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/robinmin/askllm/releases/download/v0.1.0/askllm_Linux_x86_64.tar.gz"
-        sha256 "631cc82875bdeb06864b584e0639622f25733ede287603ac973d702bb866596b"
+        url "https://github.com/robinmin/askllm/releases/download/v0.1.1/askllm_Linux_x86_64.tar.gz"
+        sha256 "294b38563e12ad862d50b2c01382667d3b324c9abb90ebeb5e2f7b24643833cd"
 
         def install
           bin.install "askllm"
@@ -40,8 +40,8 @@ class Askllm < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/robinmin/askllm/releases/download/v0.1.0/askllm_Linux_arm64.tar.gz"
-        sha256 "726ef49f0f7e73e774208aa1789424e9adba5587c9acc8c07a2a09c3b412e2f9"
+        url "https://github.com/robinmin/askllm/releases/download/v0.1.1/askllm_Linux_arm64.tar.gz"
+        sha256 "c9583d48a8ce6ec0d81a047687f2d71aa6f1cb469c59f62006ed47a6aaaf4419"
 
         def install
           bin.install "askllm"
